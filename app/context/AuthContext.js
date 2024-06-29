@@ -20,12 +20,13 @@ export const AuthContextProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((currentUser) => {
-      console.log(currentUser);
+      // console.log(currentUser);
       if (currentUser) {
-        console.log(currentUser.accessToken);
+        // console.log(currentUser.accessToken);
         setUser(currentUser);
         setToken(currentUser.accessToken);
-        console.log("token useeffect", token);
+        // console.log("token useeffect", token);
+        document.cookie = `token=${token}; path=/`
       } else {
         setUser(null);
         setToken(null);

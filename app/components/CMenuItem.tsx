@@ -40,6 +40,9 @@ const CMenuItem = () => {
       <Button key="Profile" sx={{ color: "#fff" }}>
         <Link href="/profile">Profile</Link>
       </Button>
+      <Button key="Users" sx={{ color: "#fff" }}>
+        <Link href="/users">Users</Link>
+      </Button>
 
       {loading ? null : !user ? (
         <Button onClick={handleSignIn} key="Login" sx={{ color: "#fff" }}>
